@@ -1,5 +1,8 @@
 name: Build resume with LaTex
-on: [push]
+on:
+  push:
+    branches:
+      - main
 jobs:
   build_resume:
     runs-on: ubuntu-latest
