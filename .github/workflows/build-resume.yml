@@ -13,10 +13,18 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: xi-qiu-resume.tex
-      - name: Checkout gh-pages branch
-        uses: actions/checkout@v3
-        with:
-          ref: gh-pages
+      - name: Move resume to gh-pages branch
+        run: |
+          git --version
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+          git fetch
+          git status
+          git add xi-qiu-resume.pdf
+          git stash -- xi-qiu-resume.pdf
+          git checkout gh-pages
+          git checkout stash -- xi-qiu-resume.pdf
+          git status
       - name: Add & Commit to gh-pages
         uses: EndBug/add-and-commit@v9.0.1
         with:
