@@ -60,7 +60,7 @@
 % Sections formatting
 \definecolor{emph}{RGB}{4,76,116}
 \titleformat{\section}{
-  \vspace{-5pt}\color{emph}\scshape\raggedright\fontsize{14}{17}\bfseries
+  \vspace{-8pt}\color{emph}\scshape\raggedright\fontsize{14}{17}\bfseries
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -113,7 +113,7 @@
 
 \begin{document}
 \begin{center}
-    {\Huge \scshape \color{emph} Xi Qiu} \\ \vspace{5pt}
+    {\Huge \scshape \color{emph} Robby (Xi) Qiu} \\ \vspace{5pt}
     3925 Walnut St, Philadelphia, PA 19104 \\ \vspace{1pt}
     \small \raisebox{-0.1\height}\faPhone\ 610-604-2243 ~ \href{mailto:xiqiu@seas.upenn.edu}{\raisebox{-0.2\height}\faEnvelope\  \underline{xiqiu@seas.upenn.edu}} ~ 
     \href{https://linkedin.com/in/xi-qiu}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/xi-qiu}}  ~
@@ -128,7 +128,8 @@
       {University of Pennsylvania}{\textit{exp. }May 2023}
       {\footnotesize Master of Computer and Information Technology}
       \resumeItemListStart
-        \resumeItem{\textit{Ongoing \& Prospective Coursework}: Data Structures, Algorithms, Web Development, Database Management, Machine Learning, Theory of Computation, Computer Architecture, Operating Systems, Internet and Web Systems}
+        \resumeItem{Cumulative GPA: 4.0/4.0}
+        \resumeItem{\textit{Ongoing Coursework}: Data Structures, Algorithms, Web Development, Database Management, Machine Learning, Theory of Computation, Computer Architecture, Operating Systems, Internet and Web Systems}
     \resumeItemListEnd
 
     \resumeSubheading
@@ -147,57 +148,55 @@
       {Second State}{Jun. 2021 -- Aug. 2021}
       {Software Engineer Intern}
       \resumeItemListStart
-        \resumeItem{Deployed WebAssembly functions to AWS Lambda and Tencent SCF by containerizing the open source WebAssembly runtime WasmEdge with Docker; wrote a tech article published on Cloud Native Computing Foundation's blog}
-        \resumeItem{Improved documentation for Serverless Reactor, a FaaS platform for chatbots; created Slack chatbot prototype with Rust to showcase convenience of deploying customized chatbots using the platform}
-        \resumeItem{Researched on integration of WasmEdge in smart cars (with tools from the Erdos Project) and containerization of WebAssembly applications (with CRI-O)}
+        \resumeItem{Used Docker to containerize TensorFlow models powered by WasmEdge, Second State's WebAssembly virtual machine, and deployed service on AWS Lambda and Tencent SCF; wrote detailed tutorial on CNCF’s blog}
+        \resumeItem{Developed chatbot prototypes with Rust and deployed on WasmEdge-powered FaaS platform to showcase its speed and convenience; created user documentation on usage of the plaform with code examples}
+        \resumeItem{Researched on integration of WasmEdge in smart cars (with tools from the Erdos Project) and development of WebAssembly containers (with CRI-O)}
       \resumeItemListEnd
 
     \resumeSubheading
       {ByteDance}{Dec. 2020 -- Apr. 2021}
-      {Strategy Analyst Intern}
+      {Product Manager Intern}
       \resumeItemListStart
-        \resumeItem{Worked with engineering team on designing credit system for TikTok advertisers; validated system using data analysis and visualization tools (Jupyter, Pandas, Matplotlib) and presented it to product, operations, and sales teams}
-        \resumeItem{Detected features that mark off rogue actors in TikTok's ad ecosystem through quantitative analysis; provided risk-control strategies and worked with engineering, product, and operations teams on implementation}
-        \resumeItem{Drafted and presented data report on risk overview in weekly meetings with sales teams in the US and Europe; supported them in achieving bi-monthly risk-control goals}
-        \resumeItem{Designed and straightened out risk-control metrics based on business needs; built monitoring  dashboards for metrics to improve team’s data-analytical capacity}
+        \resumeItem{Collaborated with engineering team on designing credit system for TikTok advertisers; used Pandas and Matplotlib to validate the system and visualize credit score distribution}
+        \resumeItem{Processed and analyzed behavioral data of advertisers with SQL and Python to detect traits that mark off risky advertisers; implemented corresponding risk-control features and reduced key risk metrics by 60\%}
+        \resumeItem{Built shared monitoring dashboards for key risk metrics to accelerate information transmission between engineering, operations, and sales teams}
     \resumeItemListEnd
 
     \resumeSubheading
       {MiraclePlus (Y-Combinator China)}{Apr. 2020 -- Jul. 2020}
       {Investment Analyst Intern}
       \resumeItemListStart
-        \resumeItem{Developed web-scraping tool for deal-sourcing platforms with Python (Selenium, Requests, Beautiful Soup), used regularly by analysts and helped to identify 1 out of 15 start-ups invested by MiraclePlus in Fall 2020 round}
+        \resumeItem{Developed web-scraping tool for deal-sourcing platforms with Python (Selenium, Requests, Beautiful Soup), used regularly by analysts and sourced 1 out of 15 start-ups invested by MiraclePlus in Fall 2020 round}
         \resumeItem{Scraped and analyzed data on founders and funding information of Chinese unicorn start-ups and researched on HR SaaS and car battery recycling; produced 3 in-depth reports}
-        \resumeItem{Developed Python script that scrapes and sends emails to start-ups automatically; sourced 400+ start-ups and convinced 90+ start-ups to apply to MiraclePlus in Fall 2020 round}
-    \resumeItemListEnd
-
-    \resumeSubheading
-      {Project Nous}{May 2018 -- Jan. 2021}
-      {President}
-      \resumeItemListStart
-        \resumeItem{Designed and developed Wechat Mini-APP for student application, admission, and course registration with JavaScript, Tencent Cloud Function, and MongoDB; collaborated in team of 3 through GitHub and Slack}
-        \resumeItem{Led the first non-profit liberal arts summer camp in China that exclusively serves students in underprivileged cities; offered 42 seminar classes in 4 cities to 220+ students free of charge}
-        \resumeItem{Secured 60k CNY funding and 3 long-term partners for marketing, venue, and financial support}
+        \resumeItem{Developed Python scripts to scrape and send cold emails to target start-ups automatically; sourced 400+ start-ups and convinced 90+ to apply to MiraclePlus in Fall 2020 round}
     \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
-\section{Research \& Projects}
+\section{Projects}
   \resumeSubHeadingListStart
 
     \resumeProjectHeading
-      {\positionItem{Full-Stack Web Application} \techStack{React, Express, MongoDB, Heroku}}{Sep. 2021 -- Present}
+      {\positionItem{Face Analysis iOS Application} \techStack{SwiftUI, CoreML, Vision}}{Jan. 2022}
       \resumeItemListStart
-        \resumeItem{Created Reddit-like social network website in team of 4 under the Scrum framework and deployed through Heroku}
-        \resumeItem{Built front-end with React \& MUI and back-end with Express \& MongoDB; tested with Jest and Cypress}
-        \resumeItem{Independently implemented in-APP synchronous chatting that supports images, audio, and video; built the feature through polling, file streaming with Multer, and file storage with MongoDB GridFS}
+        \resumeItem{Developed an iOS APP that extracts faces in a photo and shows predicted age, gender, and emotion for each face}
+        \resumeItem{Implemented CoreML machine learning models on iOS with SwiftUI; detected and cropped faces with Vision, Apple's built-in framework for computer vision}
       \resumeItemListEnd
 
     \resumeProjectHeading
-      {\positionItem{Candidate Coverage Project (UPenn CSS Lab)} \techStack{Scikit-learn, NumPy, Pandas}}{Oct. 2021 -- Present}
+      {\positionItem{Full-Stack Web Application (Social Network)} \techStack{React, Express, MongoDB, Heroku}}{Sep. 2021 -- Dec. 2021}
       \resumeItemListStart
-        \resumeItem{Worked on improving accuracy of random forest classifier that detects news article coverage of 2020 presidential candidates}
+        \resumeItem{Created Reddit-like social network website in team of 3 under the Scrum framework and deployed through Heroku}
+        \resumeItem{Built front-end with React \& MUI and back-end with Express \& MongoDB; tested with Jest and Cypress}
+        \resumeItem{Independently implemented in-APP synchronous chatting that supports image, audio, and video; built the feature through polling, file streaming with Multer, and file storage with MongoDB GridFS}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\positionItem{Educational Wechat Mini-APP} \techStack{JavaScript, HTML, CSS, Tencent Cloud Functions}}{Apr. 2020 -- Jul. 2020}
+      \resumeItemListStart
+        \resumeItem{Designed and developed Wechat Mini-APP for Project Nous, an education NGO; frequently used by 40+ volunteers and 200+ students for program application, admission, and course registration}
+        \resumeItem{Built front-end with JavaScript, HTML, and CSS, and used Tencent Cloud Function for back-end and database management; collaborated in team of 4 through GitHub and Slack}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -213,9 +212,9 @@
 \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
     \vspace{2pt}
-     \textbf{\color{emph} Languages}{: Python, Java, C, JavaScript, HTML/CSS, Rust, R, Shell} \\
-     \textbf{\color{emph} Tools}{: Git, Linux, AWS Lambda, Docker, Node.js, React, Cypress} \\
-     \textbf{\color{emph} Big Data}{: SQL, MongoDB, Pandas, Jupyter, Matplotlib, Seaborn}
+     \textbf{\color{emph} Languages}{: Python, Java, C, C++, JavaScript, HTML/CSS, Rust, Swift} \\
+     \textbf{\color{emph} Tools}{: Git, Linux, Docker, Node.js, React, Cypress, SwiftUI} \\
+     \textbf{\color{emph} Big Data}{: MySQL, MongoDB, Pandas, Matplotlib, Seaborn, TensorFlow}
     }}
  \end{itemize}
 }
@@ -230,7 +229,7 @@
     {\textbf{Chinese}: Native} & {\textbf{English}: Proficient}
     \end{tabularx}
     \textbf{Hiking}{: Experience in high-altitude hikes} \\
-    \textbf{Rock-Climbing}{: Intermediate - V5 \& 5.10}
+    \textbf{Rock-Climbing}{: Intermediate - V5\&5.10b}
     }}
  \end{itemize}
 }
