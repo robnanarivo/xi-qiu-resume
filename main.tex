@@ -87,7 +87,17 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeProjectHeading}[2]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & \textbf{\footnotesize #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\positionItem}[1]{\textbf{\color{emph}#1}}
+\newcommand{\techStack}[1]{$\mid$ \textit{#1}}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-5pt}}
 
 \renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
@@ -138,7 +148,7 @@
       {Software Engineer Intern}
       \resumeItemListStart
         \resumeItem{Deployed WebAssembly functions to AWS Lambda and Tencent SCF by containerizing the open source WebAssembly runtime WasmEdge with Docker; wrote a tech article published on Cloud Native Computing Foundation's blog}
-        \resumeItem{Improved documentation for Serverless Reactor, a FaaS platform for chatbots; created a Slack chatbot prototype with Rust to showcase convenience of deploying a customized chatbot using the platform}
+        \resumeItem{Improved documentation for Serverless Reactor, a FaaS platform for chatbots; created Slack chatbot prototype with Rust to showcase convenience of deploying customized chatbots using the platform}
         \resumeItem{Researched on integration of WasmEdge in smart cars (with tools from the Erdos Project) and containerization of WebAssembly applications (with CRI-O)}
       \resumeItemListEnd
 
@@ -165,24 +175,31 @@
       {Project Nous}{May 2018 -- Jan. 2021}
       {President}
       \resumeItemListStart
-        \resumeItem{Designed and developed Wechat Mini-APP for student application, admission, and course registration with JavaScript, Tencent Cloud Function, and MongoDB; collaborated in a team of 3 through GitHub and Slack}
+        \resumeItem{Designed and developed Wechat Mini-APP for student application, admission, and course registration with JavaScript, Tencent Cloud Function, and MongoDB; collaborated in team of 3 through GitHub and Slack}
         \resumeItem{Led the first non-profit liberal arts summer camp in China that exclusively serves students in underprivileged cities; offered 42 seminar classes in 4 cities to 220+ students free of charge}
         \resumeItem{Secured 60k CNY funding and 3 long-term partners for marketing, venue, and financial support}
     \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
-%-----------EXTRACURRICULAR-----------
-\section{Extracurricular}
+%-----------PROJECTS-----------
+\section{Research \& Projects}
   \resumeSubHeadingListStart
-    \resumeSubheading
-      {Oxford China Forum}{Oct. 2017 -- Mar. 2019}
-      {Acting President and Treasurer}
+
+    \resumeProjectHeading
+      {\positionItem{Group-Based Social Network APP} \techStack{React, Express, Figma}}{Sep. 2021 -- Present}
       \resumeItemListStart
-        \resumeItem{Worked as acting-president in the final 2 weeks before the forum with 7 core members: initiated online live-streaming and received 1 million views; secured 5k GBP sponsorship to bridge budget gap; boosted ticket sales through incentive schemes (sold 28.5\% of all tickets in 2 weeks)}
-        \resumeItem{Organized weekly meetings for 12 panel directors and 9 logistics officers; created budget of 27k GBP and formalized reimbursement procedures; designed sponsorship packages}
-        \resumeItem{Initiated Rural China Panel and invited 4 well-known scholars; designed discussion questions and hosted the scholars}
+        \resumeItem{Worked on creating Reddit-like social network website in team of 4 under the Scrum framework}
+        \resumeItem{Drafted team agreement and best practices; designed wireframes with Figma and RESTful API with SwaggerHub}
+        \resumeItem{Implemented front-end with React, MUI, and Redux; wrote unit tests with Jest and end-to-end tests with Cypress}
       \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\positionItem{Candidate Coverage Project (UPenn CSS Lab)} \techStack{Scikit-learn, NumPy, Pandas}}{Oct. 2021 -- Present}
+      \resumeItemListStart
+        \resumeItem{Worked on improving accuracy of random forest classifier that detects news article coverage of 2020 presidential candidates}
+      \resumeItemListEnd
+
   \resumeSubHeadingListEnd
   \vspace{5pt}
 
