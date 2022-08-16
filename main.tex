@@ -1,0 +1,252 @@
+\documentclass[11pt,a4paper,extrafontsizes,twoside]{memoir}
+\fixpdflayout
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+\usepackage{charter}
+
+% Times New Roman
+% \usepackage{mathptmx}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\fontsize{14}{17}\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[3]{
+    \item\small{
+        {#1 #2 #3 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[3]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{p{7.5cm} p{8cm} @{\extracolsep{\fill}} r}
+      \textbf{#1} & \textbf{\textit{\small#3}} & \textbf{\footnotesize #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+\begin{center}
+    {\Huge \scshape Xi Qiu} \\ \vspace{10pt}
+    \small \raisebox{-0.1\height}\faPhone\ 610-604-2243 ~ \href{mailto:xiqiu@seas.upenn.edu}{\raisebox{-0.2\height}\faEnvelope\  \underline{xiqiu@seas.upenn.edu}} ~ 
+    \href{https://linkedin.com/in/xi-qiu}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/xi-qiu}}  ~
+    \href{https://github.com/robnanarivo}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/robnanarivo}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Pennsylvania}{May 2023}
+      {\footnotesize Master of Computer and Information Technology}
+
+    \vspace{-10pt}
+
+    \resumeSubheading
+      {University of Oxford}{July 2019}
+      {\footnotesize BA Hons Philosophy, Politics and Economics}
+      \resumeItemListStart
+        \resumeItem{Overall Honours Classification: First Class -- GPA equivalent: 4.0}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+  \vspace{-20pt}
+
+%------COURSEWORK-------
+\section{\small Ongoing \& Prospective Coursework}
+    %\resumeSubHeadingListStart
+        \begin{multicols}{4}
+            \begin{itemize}[itemsep=-5pt, parsep=3pt]
+                \item\footnotesize Data Structures
+                \item Algorithms
+                \item Web Development
+                \item Database Management
+                \item Machine Learning
+                \item Theory of Computation
+                \item Computer Architecture
+                \item Operating Systems
+            \end{itemize}
+        \end{multicols}
+        \vspace{-5pt}
+    %\resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Second State}{June 2021 -- Aug. 2021}
+      {Software Engineer Intern}
+      \resumeItemListStart
+        \resumeItem{Deployed WebAssembly functions to AWS Lambda and Tencent SCF by containerizing the WebAssembly runtime WasmEdge with Docker; wrote a tech article published on the blog of Cloud Native Computing Foundation (CNCF)}
+        \resumeItem{Improved documentation for Serverless Reactor, a FaaS platform for chatbots; created a Slack chatbot prototype with Rust to showcase convenience of deploying a customized chatbot through the platform}
+        \resumeItem{Researched ways to integrate WasmEdge in smart cars using tools from the Erdos Project}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {ByteDance}{Dec. 2020 -- Apr. 2021}
+      {Strategy Analyst Intern}
+      \resumeItemListStart
+        \resumeItem{Designed credit system for TikTok advertisers and validated system with data analysis tools (e.g. Jupyter); presented credit system to product, operation, and sales teams}
+        \resumeItem{Conducted quantitative analysis of potential risk factors in TikTok ad ecosystem; provided risk-control strategies and worked with product and operation teams on implementation}
+        \resumeItem{Drafted and presented data report on risk overview in weekly meetings with sales teams in the US and Europe; supported them in achieving bi-monthly risk-control goals}
+        \resumeItem{Designed and straightened out risk-control metrics based on business needs; built monitoring  dashboards for metrics to improve team’s data-analytical capacity}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Project Nous}{May 2018 -- Jan. 2021}
+      {President}
+      \resumeItemListStart
+        \resumeItem{Led the first non-profit liberal arts summer camp in China that exclusively serves students in underprivileged cities; offered 42 seminar classes in 4 cities to 220+ students free of charge}
+        \resumeItem{Developed Wechat Mini APP for student application, admission, and course sign-up with JavaScript and HTML}
+        \resumeItem{Secured 60k CNY funding and 3 long-term partners for marketing and venue}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {MiraclePlus (Y-Combinator China)}{Apr. 2020 -- July 2020}
+      {Investment Analyst Intern}
+      \resumeItemListStart
+        \resumeItem{Developed web-scraping tool for deal-sourcing platforms with Python, used regularly by analysts and helped to identify 1 out of 15 start-ups invested by MiraclePlus in Fall 2020}
+        \resumeItem{Analyzed data on founders and funding info of Chinese unicorn start-ups and researched on HR SaaS and car battery recycling; produced 3 in-depth reports}
+        \resumeItem{Sourced 400+ start-ups through Wechat, cold calls, and deal-sourcing platforms and convinced 90+ start-ups to apply to MiraclePlus}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {The Oxford Student Consultancy}{Apr. 2018 -- June 2018}
+      {Analyst}
+      \resumeItemListStart
+        \resumeItem{Compared 59 national parks’ websites based on business potential, navigability, and aesthetics; developed online advertising strategies for North Wessex Downs National Park’s website}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-15pt}
+
+
+%-----------EXTRACURRICULAR-----------
+\section{Extracurricular}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Oxford China Forum}{Oct. 2017 -- Mar. 2019}
+      {Acting President and Treasurer}
+      \resumeItemListStart
+        \resumeItem{Worked as acting-president in the final 2 weeks before the forum with 7 core members: initiated online live-streaming and received 1 million views; secured 5k GBP sponsorship to bridge budget gap; boosted ticket sales through incentive schemes (sold 28.5\% of all tickets in 2 weeks)}
+        \resumeItem{Organized weekly meetings for 12 panel directors and 9 logistics officers; created a 27k GBP budget and formalized reimbursement procedures; designed sponsorship packages}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-5pt}
+
+
+%-----------SKILLS-----------
+
+
+\setlength\columnsep{10pt}
+\begin{multicols}{2}
+\section{\small Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming Languages}{: Python, JavaScript, Java, C, Git, HTML/CSS, SQL, R, Shell} \\
+     \textbf{Technologies}{: Linux, AWS Lambda, Docker, Node.js}
+    }}
+ \end{itemize}
+ \vfill \null
+\columnbreak
+\section{\small Languages \& Interests}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Chinese}{: Native; } \textbf{English}{: Proficient}\\
+     \textbf{Hiking}{: Experience in high-altitude \& long-distance hikes} \\
+     \textbf{Rock-Climbing}{: Intermediate - V4 \& 5.10}
+    }}
+ \end{itemize}
+ \vfill \null
+\end{multicols}
+
+\vspace{-16pt}
+
+\end{document}
