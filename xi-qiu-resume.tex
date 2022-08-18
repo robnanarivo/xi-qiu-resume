@@ -82,8 +82,22 @@
 
 \newcommand{\resumeSubheading}[3]{
   \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{p{7.5cm} p{5cm} @{\extracolsep{\fill}} r}
+      \textbf{\color{emph}#1} & \textbf{\textit{\color{emph}\small#3}} & \textbf{\footnotesize #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\educationSubheading}[3]{
+  \vspace{-2pt}\item
     \begin{tabular*}{1.0\textwidth}[t]{p{7.5cm} p{8cm} @{\extracolsep{\fill}} r}
       \textbf{\color{emph}#1} & \textbf{\textit{\color{emph}\small#3}} & \textbf{\footnotesize #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\workSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{p{7.5cm} p{5cm} @{\extracolsep{\fill}} r}
+      \textbf{\color{emph}#1} & \textbf{\textit{\color{emph}\small#2}} & {\textit{\footnotesize #3} $\mid$ \textbf{\footnotesize #4}} \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -124,15 +138,15 @@
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
-    \resumeSubheading
+    \educationSubheading
       {University of Pennsylvania}{\textit{exp. }May 2023}
       {\footnotesize Master of Computer and Information Technology}
       \resumeItemListStart
         \resumeItem{Cumulative GPA: 4.0/4.0}
-        \resumeItem{\textit{Ongoing Coursework}: Data Structures, Algorithms, Web Development, Database Management, Machine Learning, Theory of Computation, Computer Architecture, Operating Systems, Internet and Web Systems}
+        \resumeItem{\textit{Ongoing Coursework}: Data Structures, Algorithms, Web Development, Database, Machine Learning, Theory of Computation, Computer Architecture, Operating Systems, Internet and Web Systems, Computer Graphics}
     \resumeItemListEnd
 
-    \resumeSubheading
+    \educationSubheading
       {University of Oxford}{Jul. 2019}
       {\footnotesize BA Hons Philosophy, Politics and Economics}
       \resumeItemListStart
@@ -144,31 +158,37 @@
 \section{Work Experience}
   \resumeSubHeadingListStart
 
-    \resumeSubheading
-      {Second State}{Jun. 2021 -- Aug. 2021}
+    \workSubheading
+      {PayPal}
       {Software Engineer Intern}
+      {San Jose, CA}
+      {Jun. 2022 -- Aug. 2022}
       \resumeItemListStart
-        \resumeItem{Used Docker to containerize TensorFlow models powered by WasmEdge, Second State's WebAssembly virtual machine, and deployed service on AWS Lambda and Tencent SCF; wrote detailed tutorial on CNCF’s blog}
+        \resumeItem{Decoupled code and content for PayPal Shopping's codebase and integrated WorldReady Service (PayPal's localization package) to store and serve content remotely; enabled live update for content change and reduced release latency by 50\%}
+        \resumeItem{Created command-line tool that generates consistent JSON payload for piping through hash functions; published the tool as open-source npm module and received 100+ downloads in the first week}
+        \resumeItem{Completed 5 tickets in bi-weekly sprints that implement new features or fix bugs in the codebase}
+      \resumeItemListEnd
+
+    \workSubheading
+      {Second State}
+      {Software Engineer Intern}
+      {Beijing, China}
+      {Jun. 2021 -- Aug. 2021}
+      \resumeItemListStart
+        \resumeItem{Used Docker to containerize TensorFlow models powered by WasmEdge (Second State's WebAssembly virtual machine) and deployed service on AWS Lambda and Tencent SCF; wrote detailed tutorial on CNCF’s blog}
         \resumeItem{Developed chatbot prototypes with Rust and deployed on WasmEdge-powered FaaS platform to showcase its speed and convenience; created user documentation on usage of the plaform with code examples}
         \resumeItem{Researched on integration of WasmEdge in smart cars (with tools from the Erdos Project) and development of WebAssembly containers (with CRI-O)}
       \resumeItemListEnd
 
-    \resumeSubheading
-      {ByteDance}{Dec. 2020 -- Apr. 2021}
+    \workSubheading
+      {ByteDance}
       {Product Manager Intern}
+      {Beijing, China}
+      {Dec. 2020 -- Apr. 2021}
       \resumeItemListStart
         \resumeItem{Collaborated with engineering team on designing credit system for TikTok advertisers; used Pandas and Matplotlib to validate the system and visualize credit score distribution}
         \resumeItem{Processed and analyzed behavioral data of advertisers with SQL and Python to detect traits that mark off risky advertisers; implemented corresponding risk-control features and reduced key risk metrics by 60\%}
         \resumeItem{Built shared monitoring dashboards for key risk metrics to accelerate information transmission between engineering, operations, and sales teams}
-    \resumeItemListEnd
-
-    \resumeSubheading
-      {MiraclePlus (Y-Combinator China)}{Apr. 2020 -- Jul. 2020}
-      {Investment Analyst Intern}
-      \resumeItemListStart
-        \resumeItem{Developed web-scraping tool for deal-sourcing platforms with Python (Selenium, Requests, Beautiful Soup), used regularly by analysts and sourced 1 out of 15 start-ups invested by MiraclePlus in Fall 2020 round}
-        \resumeItem{Scraped and analyzed data on founders and funding information of Chinese unicorn start-ups and researched on HR SaaS and car battery recycling; produced 3 in-depth reports}
-        \resumeItem{Developed Python scripts to scrape and send cold emails to target start-ups automatically; sourced 400+ start-ups and convinced 90+ to apply to MiraclePlus in Fall 2020 round}
     \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -185,7 +205,7 @@
       \resumeItemListEnd
 
     \resumeProjectHeading
-      {\positionItem{Full-Stack Web Application (Social Network)} \techStack{React, Express, MongoDB, Heroku}}{Sep. 2021 -- Dec. 2021}
+      {\positionItem{Full-Stack Social Network Application} \techStack{React, Express, MongoDB, Heroku}}{Sep. 2021 -- Dec. 2021}
       \resumeItemListStart
         \resumeItem{Created Reddit-like social network website in team of 3 under the Scrum framework and deployed through Heroku}
         \resumeItem{Built front-end with React \& MUI and back-end with Express \& MongoDB; tested with Jest and Cypress}
@@ -193,10 +213,10 @@
       \resumeItemListEnd
 
     \resumeProjectHeading
-      {\positionItem{Educational Wechat Mini-APP} \techStack{SpringBoot, React}}{Apr. 2020 -- Jul. 2020}
+      {\positionItem{Wechat Mini-APP for Education} \techStack{React, Spring Boot, MySQL}}{Apr. 2020 -- Now}
       \resumeItemListStart
-        \resumeItem{Designed and developed Wechat Mini-APP for Project Nous, an education NGO; frequently used by 40+ volunteers and 200+ students for program application, admission, and course registration}
-        \resumeItem{Built front-end with JavaScript, HTML, and CSS, and used Tencent Cloud Function for back-end and database management; collaborated in team of 4 through GitHub and Slack}
+        \resumeItem{Designed and developed Wechat Mini-APP for Project Nous (NGO for equal access to education); frequently used by 80+ volunteers and 400+ students for program application, admission, and course registration}
+        \resumeItem{Built front-end with React and backend with Spring Boot; collaborated in team of 3 through GitHub and Slack}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -229,7 +249,7 @@
     {\textbf{Chinese}: Native} & {\textbf{English}: Proficient}
     \end{tabularx}
     \textbf{Hiking}{: Experience in high-altitude hikes} \\
-    \textbf{Rock-Climbing}{: Intermediate - V5\&5.10b}
+    \textbf{Rock-Climbing}{: Intermediate - V5\&5.11c}
     }}
  \end{itemize}
 }
