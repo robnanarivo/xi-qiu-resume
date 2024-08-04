@@ -48,7 +48,7 @@
 \addtolength{\oddsidemargin}{-0.6in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1.19in}
-\addtolength{\topmargin}{-.6in}
+\addtolength{\topmargin}{-0.6in}
 \addtolength{\textheight}{1.4in}
 
 \urlstyle{same}
@@ -58,10 +58,10 @@
 \setlength{\tabcolsep}{0in}
 
 % Sections formatting
-\definecolor{emph}{RGB}{4,76,116}
+\definecolor{emph}{RGB}{61,105,171}
 \titleformat{\section}{
-  \vspace{-8pt}\color{emph}\scshape\raggedright\fontsize{14}{17}\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-8pt}\color{emph}\scshape\raggedright\fontsize{13}{14}\bfseries
+}{}{0em}{}[\color{emph} \titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -69,7 +69,7 @@
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
-  \item\small{
+  \item \small{
     {#1 \vspace{-2pt}}
   }
 }
@@ -83,33 +83,34 @@
 \newcommand{\resumeSubheading}[3]{
   \vspace{-2pt}\item
     \begin{tabular*}{1.0\textwidth}[t]{p{7.5cm} p{5cm} @{\extracolsep{\fill}} r}
-      \textbf{\color{emph}#1} & \textbf{\textit{\color{emph}\small#3}} & \textbf{\footnotesize #2} \\
+      \textbf{#1} & \textbf{\textit{\small#3}} & \textbf{\footnotesize #2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\educationSubheading}[3]{
   \vspace{-2pt}\item
-    \begin{tabular*}{1.0\textwidth}[t]{p{7.5cm} p{8cm} @{\extracolsep{\fill}} r}
-      \textbf{\color{emph}#1} & \textbf{\textit{\color{emph}\small#3}} & \textbf{\footnotesize #2} \\
+    \begin{tabular*}{1.0\textwidth}[t]{l @{\extracolsep{\fill}} r}
+      \textbf{#1} -- \textit{#3} & \textbf{\small #2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\workSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{1.0\textwidth}[t]{p{7.5cm} p{5cm} @{\extracolsep{\fill}} r}
-      \textbf{\color{emph}#1} & \textbf{\textit{\color{emph}\small#2}} & {\textit{\footnotesize #3} $\mid$ \textbf{\footnotesize #4}} \\
+  \vspace{-2pt} \item
+    \begin{tabular*}{1.0\textwidth}[t]{l @{\extracolsep{\fill}} r}
+      \textbf{#2} -- \textbf{#1} & {\textit{\small #3} $\mid$ \textbf{\small #4}} \\
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeProjectHeading}[2]{
+\newcommand{\resumeProjectHeading}[4]{
     \vspace{-2pt}\item
     \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
-      #1 & \textbf{\footnotesize #2} \\
+      #1 \techStack{#2} \projectLink{#4} & \small #3 \\
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\positionItem}[1]{\textbf{\color{emph}#1}}
+\newcommand{\positionItem}[1]{\textbf{#1}}
 \newcommand{\techStack}[1]{$\mid$ \textit{#1}}
+\newcommand{\projectLink}[1]{$\mid$ \href{#1} {\underline{Link}}}
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-5pt}}
 
@@ -121,38 +122,23 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
+\newcommand{\sectionSmall}[1]{{
+  \vspace{-8pt}\color{emph}\scshape\raggedright\fontsize{14}{17}\bfseries #1
+}
+{}{0em}{}[\color{emph} \titlerule \vspace{-5pt}]}
+
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{document}
 \begin{center}
-    {\Huge \scshape \color{emph} Robby (Xi) Qiu} \\ \vspace{5pt}
-    3925 Walnut St, Philadelphia, PA 19104 \\ \vspace{1pt}
-    \small \raisebox{-0.1\height}\faPhone\ 610-604-2243 ~ \href{mailto:xiqiu@seas.upenn.edu}{\raisebox{-0.2\height}\faEnvelope\  \underline{xiqiu@seas.upenn.edu}} ~ 
+    {\Huge \scshape \color{emph} Xi (Robby) Qiu} \\ \vspace{5pt}
+    San Jose, California \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ 610-604-2243 ~ \href{mailto:robbyqiu@outlook.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{robbyqiu@outlook.com}} ~ 
     \href{https://linkedin.com/in/xi-qiu}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/xi-qiu}}  ~
     \href{https://github.com/robnanarivo}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/robnanarivo}}
 \end{center}
-
-
-%-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \educationSubheading
-      {University of Pennsylvania}{\textit{exp. }May 2023}
-      {\footnotesize Master of Computer and Information Technology}
-      \resumeItemListStart
-        \resumeItem{Cumulative GPA: 4.0/4.0}
-        \resumeItem{\textit{Ongoing Coursework}: Data Structures, Algorithms, Web Development, Database, Machine Learning, Theory of Computation, Computer Architecture, OS, Distributed Systems, Internet and Web Systems, Computer Graphics}
-    \resumeItemListEnd
-
-    \educationSubheading
-      {University of Oxford}{Jul. 2019}
-      {\footnotesize BA Hons Philosophy, Politics and Economics}
-      \resumeItemListStart
-        \resumeItem{Overall Honours Classification: First Class -- GPA equivalent: 4.0}
-    \resumeItemListEnd
-  \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------
 \section{Work Experience}
@@ -160,100 +146,108 @@
 
     \workSubheading
       {PayPal}
+      {Software Engineer}
+      {San Jose, CA}
+      {Jul 2023 -- Present}
+      \resumeItemListStart
+        \resumeItem{Spearheaded the development of 3 microservices for PayPal's rewards platform serving over 10 million users, achieving a 10x increase in rewarded transactions. Used Java, Spring Boot, Spring Batch, and Message Queue.}
+        \resumeItem{Increased revenue by 30\% through developing a feature to charge rewards commissions directly from merchants. Eliminated the cost of intermediary agencies for merchants.}
+        \resumeItem{Designed, developed, and tested the capability to serve product-based offers on the rewards platform in addition to merchant-based offers. Enhanced the granularity of rewards.}
+        \resumeItem{Led an initiative to improve the test framework. Reduced functional test execution time by 40\%, increased test coverage for all components by 10\%, and improved traceability of test case changes.}
+        \resumeItem{Deployed the rewards platform's microservices to 600+ distributed instances, identified key performing metrics, and set up monitoring dashboards and threshold alerts.}
+      \resumeItemListEnd
+
+    \workSubheading
+      {PayPal}
       {Software Engineer Intern}
       {San Jose, CA}
-      {May. 2022 -- Aug. 2022}
+      {May 2022 -- Aug 2022}
       \resumeItemListStart
-        \resumeItem{Decoupled code and content for PayPal Shopping's codebase and integrated WorldReady Service (PayPal's localization package) to store and serve content remotely; enabled live update for content change and reduced release latency by 50\%}
-        \resumeItem{Created command-line tool that generates consistent JSON payload for piping through hash functions; published the tool as open-source npm module and received 100+ downloads in the first week}
-        \resumeItem{Completed 5 tickets in bi-weekly sprints that implement new features or fix bugs in the codebase}
+        \resumeItem{Reduced deployment latency by 50\% through externalizing text content from JavaScript code using PayPal's localization service. Enabled instant live update for text content changes.}
+        \resumeItem{Created an open-source npm module with 100+ downloads that generates consistent JSON payload for hashing.}
       \resumeItemListEnd
 
     \workSubheading
-      {Second State}
+      {Second State (open-source company)}
       {Software Engineer Intern}
       {Beijing, China}
-      {Jun. 2021 -- Aug. 2021}
+      {Jun 2021 -- Aug 2021}
       \resumeItemListStart
-        \resumeItem{Used Docker to containerize TensorFlow models powered by WasmEdge (Second State's WebAssembly virtual machine) and deployed service on AWS Lambda and Tencent SCF; wrote detailed tutorial on CNCF’s blog}
-        \resumeItem{Developed chatbot prototypes with Rust and deployed on WasmEdge-powered FaaS platform to showcase its speed and convenience; created user documentation on usage of the plaform with code examples}
-        \resumeItem{Researched on integration of WasmEdge in smart cars (with tools from the Erdos Project) and development of WebAssembly containers (with CRI-O)}
+        \resumeItem{Created a tutorial on using Docker to containerize ML models with WebAssembly VM and deploying on AWS Lambda. Published as a GitHub repository and received 50+ stars.}
+        \resumeItem{Developed code examples of serverless functions using Rust and deployed on WebAssembly-powered cloud platform.}
       \resumeItemListEnd
 
     \workSubheading
-      {ByteDance}
+      {TikTok}
       {Product Manager Intern}
       {Beijing, China}
-      {Dec. 2020 -- Apr. 2021}
+      {Dec 2020 -- Apr 2021}
       \resumeItemListStart
-        \resumeItem{Collaborated with engineering team on designing credit system for TikTok advertisers; used Pandas and Matplotlib to validate the system and visualize credit score distribution}
-        \resumeItem{Processed and analyzed behavioral data of advertisers with SQL and Python to detect traits that mark off risky advertisers; implemented corresponding risk-control features and reduced key risk metrics by 60\%}
-        \resumeItem{Built shared monitoring dashboards for key risk metrics to accelerate information transmission between engineering, operations, and sales teams}
+        \resumeItem{Improved key risk metrics by 60\% through analyzing advertiser behavioral data using SQL and Python. Detected features of risky advertisers and implemented corresponding risk-control measures.}
+        \resumeItem{Designed a credit system for 25k TikTok advertisers in collaboration with the engineering team.}
+        \resumeItem{Presented risk metrics updates and analysis in cross-functional weekly meetings of 50+ people.}
     \resumeItemListEnd
 
   \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \educationSubheading
+      {University of Pennsylvania}{2021 -- 2023}
+      {Master of Computer and Information Technology}
+      \resumeItemListStart
+        \resumeItem{GPA: 4.0 \ $\mid$ \ Courses: Data Structures, Algorithms, Database Systems, Machine Learning, Distributed Systems}
+    \resumeItemListEnd
+
+    \educationSubheading
+      {University of Oxford}{2015 -- 2019}
+      {Philosophy, Politics and Economics}
+      \resumeItemListStart
+        \resumeItem{Overall Honours Classification: First Class -- GPA equivalent: 4.0}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
 
 %-----------PROJECTS-----------
 \section{Projects}
   \resumeSubHeadingListStart
 
     \resumeProjectHeading
-      {\positionItem{Face Analysis iOS Application} \techStack{SwiftUI, CoreML, Vision}}{Jan. 2022}
+      {RAG App for Climbing Trip Planning} {Python, LangChain, Vector DB, Scrapy} {Mar 2024 -- Present} {https://github.com/robnanarivo/mountain-project-scraper}
       \resumeItemListStart
-        \resumeItem{Developed iOS APP that extracts faces in a photo and shows predicted age, gender, and emotion for each face}
-        \resumeItem{Implemented CoreML machine learning models on iOS with SwiftUI; detected and cropped faces with Vision (Apple's built-in framework for computer vision)}
+        \resumeItem{Developed a retrieval augmented generation recommendation system for rock climbing trip planning. Used LangChain for prototyping and optimized performance with prompt engineering and fine-tuning.}
+        \resumeItem{Created a web scraper with Scrapy and stored the data in a vector DB for retrieval.}
       \resumeItemListEnd
 
     \resumeProjectHeading
-      {\positionItem{Full-Stack Social Network Application} \techStack{React, Express, MongoDB, Heroku}}{Sep. 2021 -- Dec. 2021}
+      {ML Models for Image Classification} {Python, PyTorch, NumPy} {Jan 2023 -- May 2023} {https://github.com/robnanarivo/CassavaLeaf-CIS519}
       \resumeItemListStart
-        \resumeItem{Created Reddit-like social network website in team of 3 under the Scrum framework and deployed through Heroku}
-        \resumeItem{Built front-end with React \& MUI and back-end with Express \& MongoDB; tested with Jest and Cypress}
-        \resumeItem{Independently implemented in-APP synchronous chatting that supports image, audio, and video; built the feature through polling, file streaming with Multer, and file storage with MongoDB GridFS}
+        \resumeItem{Trained 3 models (logistic regression, CNN, ResNet50) to detect diseases types based on images of cassava leaves. }
+        \resumeItem{Created a report with an analysis of hyperparameter tuning and validation metrics (F1 score and accuracy).}
+
       \resumeItemListEnd
 
     \resumeProjectHeading
-      {\positionItem{Wechat Mini-APP for Education} \techStack{React, Spring Boot, MySQL}}{Apr. 2020 -- Now}
+      {Distributed Cloud Platform} {C++, Unix} {Sep 2022 -- Dec 2022} {https://github.com/robnanarivo/miniCloud}
       \resumeItemListStart
-        \resumeItem{Designed and developed Wechat Mini-APP for Project Nous (NGO for equal access to education); frequently used by 80+ volunteers and 400+ students for program application, admission, and course registration}
-        \resumeItem{Built front-end with React and back-end with Spring Boot; collaborated in team of 3 through GitHub and Slack}
+        \resumeItem{Created a distributed cloud platform that offers email and file storage services in a team of 4. The platform supports multiple frontend and backend servers, and features data replication, fault tolerance, and data recovery.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {Face Analysis iOS App} {Swift, Core ML} {Sep 2022} {https://github.com/robnanarivo/Minitrue}
+      \resumeItemListStart
+        \resumeItem{Developed an iOS app that extracts faces in a photo and shows predicted age, gender, and emotion for each face. Integrated image recognition models with SwiftUI and Core ML.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {Full-Stack Social Network App} {JavaScript, React, Node.js, MongoDB} {Sep 2021 -- Dec 2021} {https://github.com/robnanarivo/ginger}
+      \resumeItemListStart
+        \resumeItem{Created Reddit-like web app in a team of 3 under the Scrum framework and deployed through Heroku.}
+        \resumeItem{Independently implemented in-app synchronous chatting that supports image, audio, and video. Built the feature through polling, file streaming with Multer, and file storage with MongoDB GridFS.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
-  \vspace{5pt}
-
-%-----------SKILLS-----------
-
-\begin{parcolumns}[colwidths={1=0.6\textwidth}]{2}
-\colchunk{
-{\color{emph}\scshape\raggedright\large\bfseries Programming Skills}
-\\*[.3\baselineskip]
-\titlerule
-\begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-    \vspace{2pt}
-     \textbf{\color{emph} Languages}{: Python, Java, C, C++, JavaScript, HTML/CSS, Rust, Swift} \\
-     \textbf{\color{emph} Tools}{: Git, Linux, Docker, Node.js, React, Cypress, SwiftUI, OpenGL} \\
-     \textbf{\color{emph} Big Data}{: MySQL, MongoDB, Pandas, Matplotlib, Seaborn, TensorFlow}
-    }}
- \end{itemize}
-}
-
-\colchunk{
-{\color{emph}\scshape\raggedright\large\bfseries Languages \& Interest}
-\\*[.3\baselineskip]
-\titlerule
-\begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-    \begin{tabularx}{\linewidth} { >{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}X}
-    {\textbf{Chinese}: Native} & {\textbf{English}: Proficient}
-    \end{tabularx}
-    \textbf{Hiking}{: Experience in high-altitude hikes} \\
-    \textbf{Rock-Climbing}{: Intermediate - V5\&5.11c}
-    }}
- \end{itemize}
-}
-\end{parcolumns}
 
 \vspace{-16pt}
 
