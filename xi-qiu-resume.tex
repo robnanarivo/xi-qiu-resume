@@ -87,10 +87,10 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\educationSubheading}[3]{
+\newcommand{\educationSubheading}[2]{
   \vspace{-2pt}\item
     \begin{tabular*}{1.0\textwidth}[t]{l @{\extracolsep{\fill}} r}
-      \textbf{#1} -- \textit{#3} & \textbf{\small #2} \\
+      \textbf{#1} & \small #2 \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -101,10 +101,10 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeProjectHeading}[4]{
+\newcommand{\resumeProjectHeading}[3]{
     \vspace{-2pt}\item
     \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
-      #1 \techStack{#2} \projectLink{#4} & \small #3 \\
+      #1 \techStack{#2} \projectLink{#3} \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -150,9 +150,11 @@
       {San Jose, CA}
       {Mar 2025 -- Present}
       \resumeItemListStart
-        \resumeItem{Designed and implemented a multi-agent AI system for Suspicious Actor Report (SAR) generation using Gemini, Next.js, and, FastAPI. The system performs risk analysis based on user and transaction attributes, incorporates human feedback to refine outputs, and creates SAR drafts for final review.}
-        \resumeItem{Optimized AI agent performance through evaluation and prompt engineering to align with risk investigators’ needs. Improved the accuracy of identified suspicious transaction values by 2.5x when benchmarked against human-written reports.}
-        \resumeItem{Deployed and maintained traditional ML and GenAI models for partner teams, ensuring scalable, cost-efficient production performance with continuous monitoring and optimization.}
+        \resumeItem{Designed and built a multi-agent AI system for Suspicious Actor Report (SAR) generation using Gemini, Next.js, and FastAPI. Improved agents' reasoning capability by 2.5x and raised report accuracy by 50\% through prompt engineering, evaluation, and workflow enhancements.}
+        \resumeItem{Built and optimized agentic workflows for entity extraction, data aggregation, and structured report generation. Developed a human-in-the-loop module that revises LLM-generated analyses based on investigator feedback.}
+        \resumeItem{Evaluated and integrated vLLM and LMCache into production ML pipelines, reducing inference latency by 40\%.}
+        \resumeItem{Migrated 10+ production ML pipelines to modern, high-performance platforms using GenAI-assisted automation, significantly reducing manual migration effort.}
+        \resumeItem{Ran knowledge-sharing sessions on frontier AI research and GenAI fundamentals, including paper reviews and LLM architecture deep dives.}
       \resumeItemListEnd
 
     \workSubheading
@@ -164,27 +166,6 @@
         \resumeItem{Spearheaded the development of 3 microservices for PayPal's rewards platform serving over 10 million users, achieving a 10x increase in rewarded transactions. Used Java, Spring Boot, Spring Batch, and Message Queue.}
         \resumeItem{Increased revenue by 30\% through developing a feature to charge rewards commissions directly from merchants. Eliminated the cost of intermediary agencies for merchants.}
         \resumeItem{Led an initiative to improve the test framework. Reduced functional test execution time by 40\%, increased test coverage for all components by 10\%, and improved traceability of test case changes.}
-        \resumeItem{Deployed the rewards platform's microservices to 600+ distributed instances, identified key performing metrics, and set up monitoring dashboards and threshold alerts.}
-      \resumeItemListEnd
-
-    \workSubheading
-      {PayPal}
-      {Software Engineer Intern}
-      {San Jose, CA}
-      {May 2022 -- Aug 2022}
-      \resumeItemListStart
-        \resumeItem{Reduced deployment latency by 50\% through externalizing text content from JavaScript code using PayPal's localization service. Enabled instant live update for text content changes.}
-        \resumeItem{Created an open-source npm module with 100+ downloads that generates consistent JSON payload for hashing.}
-      \resumeItemListEnd
-
-    \workSubheading
-      {Second State (open-source company)}
-      {Software Engineer Intern}
-      {Beijing, China}
-      {Jun 2021 -- Aug 2021}
-      \resumeItemListStart
-        \resumeItem{Created a tutorial on using Docker to containerize ML models with WebAssembly VM and deploying on AWS Lambda. Published as a GitHub repository and received 50+ stars.}
-        \resumeItem{Developed code examples of serverless functions using Rust and deployed on WebAssembly-powered cloud platform.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -192,19 +173,17 @@
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
-    \educationSubheading
-      {University of Pennsylvania}{Aug 2021 -- May 2023}
-      {Master of Computer and Information Technology}
+  
+    \educationSubheading{University of Pennsylvania}{Aug 2021 -- May 2023}
       \resumeItemListStart
-        \resumeItem{GPA: 4.0 \ $\mid$ \ Courses: Data Structures, Algorithms, Database Systems, Machine Learning, Distributed Systems}
-    \resumeItemListEnd
+        \resumeItem{\textit{Master of Computer and Information Technology} -- GPA: 4.0}
+      \resumeItemListEnd
 
-    \educationSubheading
-      {University of Oxford}{Oct 2015 -- Jun 2019}
-      {BA in Philosophy, Politics and Economics}
+    \educationSubheading{University of Oxford}{Oct 2015 -- Jun 2019}
       \resumeItemListStart
-        \resumeItem{Overall Honours Classification: First Class -- GPA equivalent: 4.0}
-    \resumeItemListEnd
+        \resumeItem{\textit{BA in Philosophy, Politics and Economics} -- First Class Honours}
+      \resumeItemListEnd
+    
   \resumeSubHeadingListEnd
 
 
@@ -213,37 +192,39 @@
   \resumeSubHeadingListStart
 
     \resumeProjectHeading
-      {RAG App for Climbing Trip Planning} {Python, LangChain, Vector DB, Scrapy} {Mar 2024 -- Present} {https://github.com/robnanarivo/mountain-project-scraper}
+      {Transformer Interpretability Research} {PyTorch, TransformerLens, CircuitVis} {https://github.com/robnanarivo/ARENA_3.0/tree/main/chapter1_transformer_interp/exercises}
+      \resumeItemListStart
+        \resumeItem{Recreated the GPT-2 model architecture from scratch based on the original paper. Trained on the \texttt{TinyStories} dataset and experimented with various sampling methods including Temperature, Top-k, and Top-p sampling.}
+        \resumeItem{Detected induction heads with attention pattern visualizations and ablation in GPT2-small. Reverse-engineered QK-, OV-, and K-composition circuits using factorized matrices of query, key, and value weights of the transformer heads.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {Alignment Evaluation for Frontier Models} {GPT, Claude, InspectAI} {https://github.com/robnanarivo/ARENA_3.0/tree/main/chapter3_llm_evals/exercises}
+      \resumeItemListStart
+        \resumeItem{Built a threat model on LLM's tendency for self-preservation and defined metrics to measure this property.}
+        \resumeItem{Generated a multiple-choice question dataset of 300 questions using Claude and GPT. Scored and filtered questions with LLM judge to ensure that the dataset is high-quality, diverse, and unbiased.}
+        \resumeItem{Ran evaluations on GPT-4o mini with the dataset using InspectAI evaluation framework. Analyzed model behaviors across different prompting strategies including zero-shot, chain-of-thought (CoT), and CoT with self-critique.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {RLHF for GPT-2} {PyTorch, Gymnasium, TransformerLens} {https://github.com/robnanarivo/ARENA_3.0/tree/main/chapter2_rl/exercises}
+      \resumeItemListStart
+        \resumeItem{Built the foundational reinforcement learning skillset required for RLHF by implementing and training classic algorithms (Q-learning, SARSA, DQN, and PPO) from scratch using Gymnasium environments.}
+        \resumeItem{Implemented end-to-end PPO and GRPO algorithms for training GPT-2 with RLHF, including value head modeling, rollout collection, advantage estimation, and KL-regularization.}
+        \resumeItem{Fine-tuned GPT-2 with both full-parameter training and LoRA. Experimented with rule-based and sentiment-based reward functions to analyze how distinct reward signals steer model behavior.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {RAG App for Climbing Trip Planning} {Python, LangChain, Vector DB, Scrapy} {https://github.com/robnanarivo/mountain-project-scraper}
       \resumeItemListStart
         \resumeItem{Developed a retrieval augmented generation recommendation system for rock climbing trip planning. Used LangChain for prototyping and optimized performance with prompt engineering and fine-tuning.}
         \resumeItem{Created a web scraper with Scrapy and stored the data in a vector DB for retrieval.}
       \resumeItemListEnd
 
     \resumeProjectHeading
-      {ML Models for Image Classification} {Python, PyTorch, NumPy} {Jan 2023 -- May 2023} {https://github.com/robnanarivo/CassavaLeaf-CIS519}
-      \resumeItemListStart
-        \resumeItem{Trained 3 models (logistic regression, CNN, ResNet50) to detect diseases types based on images of cassava leaves. }
-        \resumeItem{Created a report with an analysis of hyperparameter tuning and validation metrics (F1 score and accuracy).}
-
-      \resumeItemListEnd
-
-    \resumeProjectHeading
-      {Distributed Cloud Platform} {C++, Unix} {Sep 2022 -- Dec 2022} {https://github.com/robnanarivo/miniCloud}
+      {Distributed Cloud Platform} {C++, Unix} {https://github.com/robnanarivo/miniCloud}
       \resumeItemListStart
         \resumeItem{Created a distributed cloud platform that offers email and file storage services in a team of 4. The platform supports multiple frontend and backend servers, and features data replication, fault tolerance, and data recovery.}
-      \resumeItemListEnd
-
-    \resumeProjectHeading
-      {Face Analysis iOS App} {Swift, Core ML} {Sep 2022} {https://github.com/robnanarivo/Minitrue}
-      \resumeItemListStart
-        \resumeItem{Developed an iOS app that extracts faces in a photo and shows predicted age, gender, and emotion for each face. Integrated image recognition models with SwiftUI and Core ML.}
-      \resumeItemListEnd
-
-    \resumeProjectHeading
-      {Full-Stack Social Network App} {JavaScript, React, Node.js, MongoDB} {Sep 2021 -- Dec 2021} {https://github.com/robnanarivo/ginger}
-      \resumeItemListStart
-        \resumeItem{Created Reddit-like web app in a team of 3 under the Scrum framework and deployed through Heroku.}
-        \resumeItem{Independently implemented in-app synchronous chatting that supports image, audio, and video. Built the feature through polling, file streaming with Multer, and file storage with MongoDB GridFS.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
