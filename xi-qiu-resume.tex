@@ -192,14 +192,7 @@
   \resumeSubHeadingListStart
 
     \resumeProjectHeading
-      {Transformer Interpretability Research} {PyTorch, TransformerLens, CircuitVis} {https://github.com/robnanarivo/ARENA_3.0/tree/main/chapter1_transformer_interp/exercises}
-      \resumeItemListStart
-        \resumeItem{Recreated the GPT-2 model architecture from scratch based on the original paper. Trained on \texttt{TinyStories} dataset and experimented with various sampling methods including Temperature, Top-k, and Top-p sampling.}
-        \resumeItem{Detected induction heads with attention pattern visualization and ablation in GPT2-small. Reverse-engineered QK-, OV-, and K-composition circuits using factorized matrices of query, key, and value weights of the transformer heads.}
-      \resumeItemListEnd
-
-    \resumeProjectHeading
-      {Alignment Evaluation for Frontier Models} {GPT, Claude, InspectAI} {https://github.com/robnanarivo/ARENA_3.0/tree/main/chapter3_llm_evals/exercises}
+      {Alignment Evaluation for Frontier Models} {GPT, Claude, InspectAI} {https://github.com/robnanarivo/llm-eval}
       \resumeItemListStart
         \resumeItem{Built a threat model on LLM's tendency for self-preservation and defined metrics to measure this property.}
         \resumeItem{Generated a multiple-choice question dataset of 300 questions using Claude and GPT. Scored and filtered questions with LLM judge to ensure that the dataset is high-quality, diverse, and unbiased.}
@@ -207,11 +200,19 @@
       \resumeItemListEnd
 
     \resumeProjectHeading
-      {RLHF for GPT-2} {PyTorch, Gymnasium, TransformerLens} {https://github.com/robnanarivo/ARENA_3.0/tree/main/chapter2_rl/exercises}
+      {RLHF for GPT-2} {PyTorch, Gymnasium, TransformerLens} {https://github.com/robnanarivo/rlhf-impl}
       \resumeItemListStart
         \resumeItem{Built the foundational reinforcement learning skillset required for RLHF by implementing and training classic algorithms (Q-learning, SARSA, DQN, and PPO) from scratch on Gymnasium environments.}
         \resumeItem{Implemented end-to-end PPO and GRPO algorithms for training GPT-2 with RLHF, including value head modeling, rollout collection, advantage estimation, and KL-regularization.}
         \resumeItem{Fine-tuned GPT-2 with both full-parameter training and LoRA. Experimented with rule-based and sentiment-based reward functions to analyze how distinct reward signals steer model behavior.}
+      \resumeItemListEnd
+    
+    \resumeProjectHeading
+      {Transformer Interpretability Research} {PyTorch, TransformerLens, CircuitVis} {https://github.com/robnanarivo/mech-interp}
+      \resumeItemListStart
+        \resumeItem{Recreated the GPT-2 model architecture from scratch based on the original paper. Trained on \texttt{TinyStories} dataset and experimented with various sampling methods including Temperature, Top-k, and Top-p sampling.}
+        \resumeItem{Detected induction heads with attention pattern visualization and ablation in GPT2-small. Reverse-engineered QK-, OV-, and K-composition circuits using factorized matrices of query, key, and value weights of the transformer heads.}
+        \resumeItem{Implemented sparse autoencoders (SAE) to interpret GPT-2 layers, identifying monosemantic features and analyzing attention-layer activations.}
       \resumeItemListEnd
 
     \resumeProjectHeading
