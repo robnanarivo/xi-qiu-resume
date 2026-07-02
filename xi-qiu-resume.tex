@@ -146,26 +146,25 @@
 
     \workSubheading
       {PayPal}
-      {Machine Learning Engineer}
+      {Senior Machine Learning Engineer}
       {San Jose, CA}
       {Jan 2025 -- Present}
       \resumeItemListStart
-        \resumeItem{Designed and built a multi-agent AI system for Suspicious Actor Report (SAR) generation using Python, Gemini, Next.js, and FastAPI. Improved agent reasoning capability by 2.5x and raised report accuracy by 50\% through prompt engineering, evaluation, and workflow enhancements.}
-        \resumeItem{Built and optimized agentic workflows for entity extraction, data aggregation, and structured report generation. Developed a human-in-the-loop module that revises LLM-generated analyses based on investigator feedback.}
-        \resumeItem{Evaluated and integrated vLLM and LMCache into production ML pipelines, reducing inference latency by 40\%.}
-        \resumeItem{Migrated 10+ production ML pipelines to modern, high-performance platforms using GenAI-assisted automation, reducing manual migration effort by 50\%.}
-        \resumeItem{Ran knowledge-sharing sessions on frontier AI research and GenAI fundamentals, including paper reviews and LLM architecture deep dives.}
+        \resumeItem{Built an AI agent (Python, Gemini, Next.js) for financial risk analysis. Orchestrated agentic workflows for risk signal identification, data aggregation, and report drafting. Developed a copilot interface that allows investigators to review and correct AI-generated analyses at each stage. Improved report accuracy by 50\% through context engineering and tool-call optimization.}
+        \resumeItem{Built an end-to-end PySpark pipeline for extracting, summarizing, and clustering risk factors from investigation reports using Gemini. Productionized the pipeline from research onto PayPal's ML platform and achieved 10x reduction in run time through batched LLM inference and parallel execution.}
+        \resumeItem{Led inference optimization to meet production requirement of 700K+ LLM calls per day. Benchmarked token throughput across Gemini and self-hosted Llama models using synthetically scaled datasets. Achieved 20\% throughput gain via speculative decoding and deployed optimized vLLM serving stack on cloud GPU instances.}
+        \resumeItem{Pioneered the team's first LLM monitoring effort by deploying Langfuse-based observability across 10+ production solutions, providing end-to-end tracing of model outputs, cost, and token throughput at each pipeline stage.}
       \resumeItemListEnd
 
     \workSubheading
       {PayPal}
-      {Software Engineer}
+      {Software Engineer (Platform Infrastructure)}
       {San Jose, CA}
       {Jul 2023 -- Jan 2025}
       \resumeItemListStart
-        \resumeItem{Spearheaded the development of 3 microservices for PayPal's rewards platform serving over 10 million users, achieving a 10x increase in rewarded transactions. Used Java, Spring Boot, Spring Batch, and Message Queue.}
-        \resumeItem{Increased revenue by 30\% through developing a feature to charge rewards commissions directly from merchants. Eliminated the cost of intermediary agencies for merchants.}
-        \resumeItem{Led an initiative to improve the test framework. Reduced functional test execution time by 40\%, increased test coverage for all components by 10\%, and improved traceability of test case changes.}
+        \resumeItem{Built and maintained 3 core infrastructure components powering PayPal's rewards platform (300M+ users): reward program management, real-time transaction processing, and batch payouts.}
+        \resumeItem{Rebuilt the team's test infrastructure by enabling parallel execution and migrating test cases from Excel to Java. Reduced test execution time by 18x and improved traceability of test case changes.}
+        \resumeItem{Improved production stability for the rewards platform's distributed services by triaging cross-team issues, debugging data pipeline failures, and resolving production incidents.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -192,17 +191,22 @@
   \resumeSubHeadingListStart
 
     \resumeProjectHeading
-      {Alignment Evaluation for Frontier Models} {GPT, Claude, InspectAI} {https://github.com/robnanarivo/llm-eval}
+      {Agentic Capability Evaluation for Claude Opus 4.8} {Claude, Hawk, InspectAI} {https://docs.google.com/document/d/1pxeVffXgXevPfjrXHakpgCaBiNOwYd4Dn_bZlaG4KSY/edit?usp=sharing}
       \resumeItemListStart
-        \resumeItem{Built a threat model on LLM's tendency for self-preservation and defined metrics to measure this property.}
-        \resumeItem{Generated a multiple-choice question dataset of 300 questions using Claude and GPT. Scored and filtered questions with LLM judge to ensure that the dataset is high-quality, diverse, and unbiased.}
-        \resumeItem{Ran evaluations on GPT-4o mini with the dataset using InspectAI evaluation framework. Analyzed model behaviors across different prompting strategies including zero-shot, chain-of-thought (CoT), and CoT with self-critique.}
+        \resumeItem{Evaluated Claude Opus 4.8 on 150+ coding, research engineering, and cybersecurity tasks (HCAST, RE-Bench) using Hawk and InspectAI. Estimated the model's capability ceiling by modeling success rates against task difficulty.}
+        \resumeItem{Audited task transcripts to analyze performance deltas against the predecessor model, distinguishing genuine capability improvements from spurious results caused by reward hacking, safety refusals, instruction-following failures, and scorer bugs.}
       \resumeItemListEnd
 
     \resumeProjectHeading
-      {RLHF for GPT-2} {PyTorch, Gymnasium, TransformerLens} {https://github.com/robnanarivo/rlhf-impl}
+      {Alignment Evaluation for Frontier Models} {GPT, Claude, InspectAI} {https://github.com/robnanarivo/llm-eval}
       \resumeItemListStart
-        \resumeItem{Built the foundational reinforcement learning skillset required for RLHF by implementing and training classic algorithms (Q-learning, SARSA, DQN, and PPO) from scratch on Gymnasium environments.}
+        \resumeItem{Generated a dataset of 300 questions using Claude and GPT to measure LLMs' self-preservation behavior. Scored and filtered questions with LLM-as-a-judge to ensure that the dataset is high-quality, diverse, and unbiased.}
+        \resumeItem{Evaluated GPT-4o mini's self-preservation tendency using InspectAI. Analyzed its moral decision-making capability across different prompting strategies including zero-shot, chain-of-thought (CoT), and CoT with self-critique.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {RLHF for GPT-2} {PyTorch, TransformerLens} {https://github.com/robnanarivo/rlhf-impl}
+      \resumeItemListStart
         \resumeItem{Implemented end-to-end PPO and GRPO algorithms for training GPT-2 with RLHF, including value head modeling, rollout collection, advantage estimation, and KL-regularization.}
         \resumeItem{Fine-tuned GPT-2 with both full-parameter training and LoRA. Experimented with rule-based and sentiment-based reward functions to analyze how distinct reward signals steer model behavior.}
       \resumeItemListEnd
@@ -210,22 +214,15 @@
     \resumeProjectHeading
       {Transformer Interpretability Research} {PyTorch, TransformerLens, CircuitVis} {https://github.com/robnanarivo/mech-interp}
       \resumeItemListStart
-        \resumeItem{Recreated the GPT-2 model architecture from scratch based on the original paper. Trained on \texttt{TinyStories} dataset and experimented with various sampling methods including Temperature, Top-k, and Top-p sampling.}
-        \resumeItem{Detected induction heads with attention pattern visualization and ablation in GPT2-small. Reverse-engineered QK-, OV-, and K-composition circuits using factorized matrices of query, key, and value weights of the transformer heads.}
-        \resumeItem{Implemented sparse autoencoders (SAE) to interpret GPT-2 layers, identifying monosemantic features and analyzing attention-layer activations.}
+        \resumeItem{Recreated the GPT-2 model architecture from scratch based on the original paper. Trained on the \texttt{TinyStories} dataset and experimented with various sampling methods including temperature, top-k, and top-p.}
+        \resumeItem{Detected induction heads with attention pattern visualization and ablation in GPT-2 small. Reverse-engineered QK-, OV-, and K-composition circuits using factorized matrices of query, key, and value weights of the transformer heads.}
+        \resumeItem{Implemented sparse autoencoders to interpret GPT-2 layers, identifying monosemantic features and analyzing attention-layer activations.}
       \resumeItemListEnd
 
     \resumeProjectHeading
-      {RAG App for Climbing Trip Planning} {Python, LangChain, Vector DB, Scrapy} {https://github.com/robnanarivo/mountain-project-scraper}
+      {RAG App for Rock Climbing Trip Planning} {Python, LangChain, Vector DB, Scrapy} {https://github.com/robnanarivo/mountain-project-scraper}
       \resumeItemListStart
-        \resumeItem{Developed a retrieval-augmented generation (RAG) recommendation system for rock climbing trip planning. Used LangChain for prototyping and optimized performance with prompt engineering and fine-tuning.}
-        \resumeItem{Created a web scraper with Scrapy and stored the data in a vector DB for retrieval.}
-      \resumeItemListEnd
-
-    \resumeProjectHeading
-      {Distributed Cloud Platform} {C++, Unix} {https://github.com/robnanarivo/miniCloud}
-      \resumeItemListStart
-        \resumeItem{Created a distributed cloud platform that offers email and file storage services in a team of 4. The platform features multi-node, load-balanced frontend and backend services with data replication, fault tolerance, and recovery.}
+        \resumeItem{Developed a RAG recommendation system for rock climbing trips. Scraped data into a vector database for retrieval.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
